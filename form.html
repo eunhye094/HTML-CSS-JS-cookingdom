@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>FORM</title>
+        <title>설문조사</title>
         <meta charset="utf-8">
-        <meta name="description" content="쿠키런 킹덤 소개">
-        <meta name="keywords" content="게임, 쿠키런 킹덤">
-        <meta name="author" content="eunhye">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="쿠키런 킹덤의 쿠키 소개">
+        <meta name="keywords" content="게임, 쿠키런 킹덤, 캐릭터 소개">
+        <meta name="author" content="은혜">
         <!--<meta http-equiv="refresh" content="30">-->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-CQ656FQLYC"></script>
         <script>
@@ -34,12 +35,18 @@
             <article>
                 <p>
                     <h3>개인정보</h3> 
-                    <form action="http://localhost/signup.php" method="post" enctype="multipart/form-data">
-                        <p>아이디 : <input type="text" name="id"></p>
-                        <p>비밀번호 : <input type="password" name="pw"></p>
+                    <form action="http://localhost/signup.php" method="post" enctype="multipart/form-data"  autocomplete="on">
+                        <p>아이디 : <input type="text" name="id" autofocus placeholder="영어+(필수)+숫자 형식" pattern="[a-zA-Z].+[0-9]" required></p>
+                        <p>비밀번호 : <input type="password" name="pw" autocomplete="off" placeholder="자유 형식" required></p>
                         <p>이름 : <input type="text" name="name" value="용감한 쿠키"></p>
                         <p>소개 : <textarea cols="50" rows="2" name="info">나는 아주 용감한 쿠키야!</textarea></p>
                         <p>프로필 사진 : <input type="file" name="profile"></p>
+                        <p>나이 : <input type="number" name="age" min="1" max="100"></p>
+                        <p>생년월일 : <input type="date" name="birth"></p>
+                        <p>이메일 : <input type="email" name="email"></p>
+                        <p>전화번호 :  <input type="tel" name="tel"></p>
+                        <p>블로그 URL : <input type="url" name="blog"></p>
+                        <p>해당 사이트를 발견하게 된 검색어 : <input type="search" name="search"></p>
                         <p><input type="hidden" name="membership" value="general"></p>
                         <input type="reset" value="내용삭제">
                         <input type="submit" value="회원가입">
@@ -87,8 +94,23 @@
                                 마법형: <input type="checkbox" name="use_type" value="magic">
                             </label>
                         </p>
+                        <p>
+                            <h4>쿠키런 킹덤 이용</h4>
+                            <label>
+                                시작한 달: <input type="month" name="monthv">
+                            </label><br>
+                            <label>
+                                자주 이용한 주: <input type="week" name="weekv">
+                            </label><br>
+                            <label>
+                                주로 접속하는 시간: <input type="time" name="timev">
+                            </label><br>
+                            <label>
+                                만족도: 0 <input type="range" name="rangev" min="0" max="100"> 100
+                            </label>
+                        </p>
                         <!--<input type="button" value="알림" onclick="alert('알림이에요!')">-->
-                        <input type="submit" value="제출">
+                        <input type="submit" value="완료">
                     </form>
                 </p><br>
             </article>
