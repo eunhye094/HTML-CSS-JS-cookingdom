@@ -8,22 +8,7 @@
         <meta name="keywords" content="게임, 쿠키런 킹덤, 캐릭터 소개">
         <meta name="author" content="은혜">
         <!--<meta http-equiv="refresh" content="30">-->
-        <style>
-            h1{
-                font-size: 45px;
-                text-align: center;
-            }
-            a {
-                color: black;
-                text-decoration: none;
-            }
-            .cookie {
-                color: gray;              
-            }
-            #active {
-                color: red;
-            }
-        </style>
+        <link rel="stylesheet" href="style.css">
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-CQ656FQLYC"></script>
         <script>
         window.dataLayer = window.dataLayer || [];
@@ -36,101 +21,103 @@
         <header>
             <h1><a href="index.html">쿠키런 킹덤</h1></a>
         </header>
-        <nav>
-            <ol>
-                <li><a href="1.html" class="cookie">파르페맛 쿠키</li></a>
-                <li><a href="2.html" class="cookie">흑당맛 쿠키</li></a>
-                <li><a href="3.html" class="cookie">클로티드 크림 쿠키</li></a>
-                <li><a href="table.html">쿠키 정리</a></li>
-                <li><a href="form.html" id="active">설문조사</a></li>
-            </ol>
-        </nav>
-        <section>
-            <h2>설문조사</h2>
-            <font size="3" color="blue">편하게 응답해주시면 됩니다.</font><br><br>
-            <article>
-                <p>
-                    <h3>개인정보</h3> 
-                    <form action="http://localhost/signup.php" method="post" enctype="multipart/form-data"  autocomplete="on">
-                        <p>아이디 : <input type="text" name="id" autofocus placeholder="영어+(필수)+숫자 형식" pattern="[a-zA-Z].+[0-9]" required></p>
-                        <p>비밀번호 : <input type="password" name="pw" autocomplete="off" placeholder="자유 형식" required></p>
-                        <p>이름 : <input type="text" name="name" value="용감한 쿠키"></p>
-                        <p>소개 : <textarea cols="50" rows="2" name="info">나는 아주 용감한 쿠키야!</textarea></p>
-                        <p>프로필 사진 : <input type="file" name="profile"></p>
-                        <p>나이 : <input type="number" name="age" min="1" max="100"></p>
-                        <p>생년월일 : <input type="date" name="birth"></p>
-                        <p>이메일 : <input type="email" name="email"></p>
-                        <p>전화번호 :  <input type="tel" name="tel"></p>
-                        <p>블로그 URL : <input type="url" name="blog"></p>
-                        <p>해당 사이트를 발견하게 된 검색어 : <input type="search" name="search"></p>
-                        <p><input type="hidden" name="membership" value="general"></p>
-                        <input type="reset" value="내용삭제">
-                        <input type="submit" value="회원가입">
-                    </form>
-                </p><br>
-            </article>
-            <article>
-                <p>
-                    <h3>설문조사</h3> 
-                    <form action="http://localhost/survey.php">
-                        <p>
-                            <h4>가장 좋아하는 쿠키</h4>
-                            <select name="favorite_cookie">
-                                <option value="parfait_cookie">파르페맛 쿠키</option>
-                                <option value="caramel_arrow_cookie">흑당맛 쿠키</option>
-                                <option value="clotted_cream_cookie">클로티드 크림 쿠키</option>
-                            </select>
-                        </p>
-                        <p>
-                            <h4>현재 사용하는 쿠키 (ctrl 눌러 다중선택 가능)</h4>
-                            <select name="use_cookie" multiple>
-                                <option value="parfait_cookie">파르페맛 쿠키</option>
-                                <option value="caramel_arrow_cookie">흑당맛 쿠키</option>
-                                <option value="clotted_cream_cookie">클로티드 크림 쿠키</option>
-                            </select>
-                        </p>
-                        <p>
-                            <h4>가장 좋아하는 쿠키 유형</h4>
-                            <label for="support_radio">지원형: </label>
-                            <input type="radio" id="support_radio" name="favorite_type" value="support" checked><br>
-                            <label for="shooting_radio">사격형: </label>
-                            <input type="radio" id="shooting_radio" name="favorite_type" value="shooting"><br>
-                            <label for="magic_radio">마법형: </label>
-                            <input type="radio" id="magic_radio" name="favorite_type" value="magic">
-                        </p>
-                        <p>
-                            <h4>현재 사용하는 유형 (다중선택 가능)</h4>
-                            <label>
-                                지원형: <input type="checkbox" name="use_type" value="support" checked>
-                            </label><br>
-                            <label>
-                                사격형: <input type="checkbox" name="use_type" value="shooting">
-                            </label><br>
-                            <label>
-                                마법형: <input type="checkbox" name="use_type" value="magic">
-                            </label>
-                        </p>
-                        <p>
-                            <h4>쿠키런 킹덤 이용</h4>
-                            <label>
-                                시작한 달: <input type="month" name="monthv">
-                            </label><br>
-                            <label>
-                                자주 이용한 주: <input type="week" name="weekv">
-                            </label><br>
-                            <label>
-                                주로 접속하는 시간: <input type="time" name="timev">
-                            </label><br>
-                            <label>
-                                만족도: 0 <input type="range" name="rangev" min="0" max="100"> 100
-                            </label>
-                        </p>
-                        <!--<input type="button" value="알림" onclick="alert('알림이에요!')">-->
-                        <input type="submit" value="완료">
-                    </form>
-                </p><br>
-            </article>
-        </section>
+        <div id="grid">
+            <nav>
+                <ol>
+                    <li><a href="1.html" class="cookie">파르페맛 쿠키</li></a>
+                    <li><a href="2.html" class="cookie">흑당맛 쿠키</li></a>
+                    <li><a href="3.html" class="cookie">클로티드 크림 쿠키</li></a>
+                    <li><a href="table.html">쿠키 정리</a></li>
+                    <li><a href="form.html" id="active">설문조사</a></li>
+                </ol>
+            </nav>
+            <section>
+                <h2>설문조사</h2>
+                <font size="3" color="blue">편하게 응답해주시면 됩니다.</font><br><br>
+                <article>
+                    <p>
+                        <h3>개인정보</h3> 
+                        <form action="http://localhost/signup.php" method="post" enctype="multipart/form-data"  autocomplete="on">
+                            <p>아이디 : <input type="text" name="id" autofocus placeholder="영어+(필수)+숫자 형식" pattern="[a-zA-Z].+[0-9]" required></p>
+                            <p>비밀번호 : <input type="password" name="pw" autocomplete="off" placeholder="자유 형식" required></p>
+                            <p>이름 : <input type="text" name="name" value="용감한 쿠키"></p>
+                            <p>소개 : <textarea cols="50" rows="2" name="info">나는 아주 용감한 쿠키야!</textarea></p>
+                            <p>프로필 사진 : <input type="file" name="profile"></p>
+                            <p>나이 : <input type="number" name="age" min="1" max="100"></p>
+                            <p>생년월일 : <input type="date" name="birth"></p>
+                            <p>이메일 : <input type="email" name="email"></p>
+                            <p>전화번호 :  <input type="tel" name="tel"></p>
+                            <p>블로그 URL : <input type="url" name="blog"></p>
+                            <p>해당 사이트를 발견하게 된 검색어 : <input type="search" name="search"></p>
+                            <p><input type="hidden" name="membership" value="general"></p>
+                            <input type="reset" value="내용삭제">
+                            <input type="submit" value="회원가입">
+                        </form>
+                    </p><br>
+                </article>
+                <article>
+                    <p>
+                        <h3>설문조사</h3> 
+                        <form action="http://localhost/survey.php">
+                            <p>
+                                <h4>가장 좋아하는 쿠키</h4>
+                                <select name="favorite_cookie">
+                                    <option value="parfait_cookie">파르페맛 쿠키</option>
+                                    <option value="caramel_arrow_cookie">흑당맛 쿠키</option>
+                                    <option value="clotted_cream_cookie">클로티드 크림 쿠키</option>
+                                </select>
+                            </p>
+                            <p>
+                                <h4>현재 사용하는 쿠키 (ctrl 눌러 다중선택 가능)</h4>
+                                <select name="use_cookie" multiple>
+                                    <option value="parfait_cookie">파르페맛 쿠키</option>
+                                    <option value="caramel_arrow_cookie">흑당맛 쿠키</option>
+                                    <option value="clotted_cream_cookie">클로티드 크림 쿠키</option>
+                                </select>
+                            </p>
+                            <p>
+                                <h4>가장 좋아하는 쿠키 유형</h4>
+                                <label for="support_radio">지원형: </label>
+                                <input type="radio" id="support_radio" name="favorite_type" value="support" checked><br>
+                                <label for="shooting_radio">사격형: </label>
+                                <input type="radio" id="shooting_radio" name="favorite_type" value="shooting"><br>
+                                <label for="magic_radio">마법형: </label>
+                                <input type="radio" id="magic_radio" name="favorite_type" value="magic">
+                            </p>
+                            <p>
+                                <h4>현재 사용하는 유형 (다중선택 가능)</h4>
+                                <label>
+                                    지원형: <input type="checkbox" name="use_type" value="support" checked>
+                                </label><br>
+                                <label>
+                                    사격형: <input type="checkbox" name="use_type" value="shooting">
+                                </label><br>
+                                <label>
+                                    마법형: <input type="checkbox" name="use_type" value="magic">
+                                </label>
+                            </p>
+                            <p>
+                                <h4>쿠키런 킹덤 이용</h4>
+                                <label>
+                                    시작한 달: <input type="month" name="monthv">
+                                </label><br>
+                                <label>
+                                    자주 이용한 주: <input type="week" name="weekv">
+                                </label><br>
+                                <label>
+                                    주로 접속하는 시간: <input type="time" name="timev">
+                                </label><br>
+                                <label>
+                                    만족도: 0 <input type="range" name="rangev" min="0" max="100"> 100
+                                </label>
+                            </p>
+                            <!--<input type="button" value="알림" onclick="alert('알림이에요!')">-->
+                            <input type="submit" value="완료">
+                        </form>
+                    </p><br>
+                </article>
+            </section>
+        </div>
         <footer>
             <ul>
                 <li><a href="https://github.com/eunhye094">개발자 GitHub</a></li>

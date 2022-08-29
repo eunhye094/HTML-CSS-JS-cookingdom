@@ -8,20 +8,17 @@
         <meta name="keywords" content="게임, 쿠키런 킹덤, 캐릭터 소개">
         <meta name="author" content="은혜">
         <!--<meta http-equiv="refresh" content="30">-->
+        <link rel="stylesheet" href="style.css">
         <style>
-            h1{
-                font-size: 45px;
-                text-align: center;
-            }
-            a {
-                color: black;
-                text-decoration: none;
-            }
-            .cookie {
-                color: gray;              
-            }
-            #active {
-                color: red;
+            #box{
+              border-width: 3px;
+              border-color: blue;
+              border-style: double dashed dotted solid;
+              padding:20px;
+              margin:20px;
+              width:250px;
+              height: 50px;
+              display:block;
             }
         </style>
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-CQ656FQLYC"></script>
@@ -36,41 +33,44 @@
         <header>
             <h1><a href="index.html">쿠키런 킹덤</h1></a>
         </header>
-        <nav>
-            <ol>
-                <li><a href="1.html" class="cookie">파르페맛 쿠키</li></a>
-                <li><a href="2.html" class="cookie">흑당맛 쿠키</li></a>
-                <li><a href="3.html" class="cookie">클로티드 크림 쿠키</li></a>
-                <li><a href="table.html" id="active">쿠키 정리</a></li>
-                <li><a href="form.html">설문조사</a></li>
-            </ol>
-        </nav>
-        <article>
-            <h2>쿠키 정리</h2>
-            <table border="1">
-                <thead>
-                    <tr>
-                        <th>이름</th><th>등급</th><th>유형</th><th>포지션</th><th>티어</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>파르페맛 쿠키</td><td rowspan="2">EPIC</td><td>지원형</td><td>후방</td><td>1(SS)</td>
-                    </tr>
-                    <tr>
-                        <td>흑당맛 쿠키</td><td>사격형</td><td>전방</td><td>0(SSS)</td>
-                    </tr>
-                    <tr>
-                        <td>클로티드 크림 쿠키</td><td>SUPER EPIC</td><td>마법형</td><td>중앙</td><td>1(SS)</td>
-                    </tr>
-                </tbody>
-                <tfoot>
-                    <tr>
-                        <td colspan="4">평균</td><td>0.6(SS)</td>
-                    </tr>
-                </tfoot>
-            </table><br>
-        </article>
+        <div id="grid">
+            <nav>
+                <ol>
+                    <li><a href="1.html" class="cookie">파르페맛 쿠키</li></a>
+                    <li><a href="2.html" class="cookie">흑당맛 쿠키</li></a>
+                    <li><a href="3.html" class="cookie">클로티드 크림 쿠키</li></a>
+                    <li><a href="table.html" id="active">쿠키 정리</a></li>
+                    <li><a href="form.html">설문조사</a></li>
+                </ol>
+            </nav>
+            <article>
+                <h2>쿠키 정리</h2>
+                <table border="1">
+                    <thead>
+                        <tr>
+                            <th>이름</th><th>등급</th><th>유형</th><th>포지션</th><th>티어</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>파르페맛 쿠키</td><td rowspan="2">EPIC</td><td>지원형</td><td>후방</td><td>1(SS)</td>
+                        </tr>
+                        <tr>
+                            <td>흑당맛 쿠키</td><td>사격형</td><td>전방</td><td>0(SSS)</td>
+                        </tr>
+                        <tr>
+                            <td>클로티드 크림 쿠키</td><td>SUPER EPIC</td><td>마법형</td><td>중앙</td><td>1(SS)</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="4">평균</td><td>0.6(SS)</td>
+                        </tr>
+                    </tfoot>
+                </table><br>
+                <h3 id="box">2022년 8월 티어표 기준</h3>
+            </article>
+        </div>
         <footer>
             <ul>
                 <li><a href="https://github.com/eunhye094">개발자 GitHub</a></li>
