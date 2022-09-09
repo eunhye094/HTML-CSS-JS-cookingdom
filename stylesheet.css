@@ -24,6 +24,22 @@
     padding-left: 30px;
     margin: 0;
 }
+#main-container{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    text-align: center;
+}
+#main-container div{
+    flex-grow: 1;
+}
+#sub-container{
+    display: flex;
+    flex-direction: row;
+}
+#item{
+    border: 1px solid black;
+}
 #btn-heart {
     width: 3.5rem;
     height: 3.5rem;
@@ -59,6 +75,22 @@
     font-family: 'Nanum Myeongjo', serif;
     color: gray;              
 }
+.column{
+    font-family: 'CookieRunRegular';
+    text-align: justify;
+    column-count: 4;
+    /* column-width: 200px;*/
+    column-gap:30px;
+    column-rule-style: solid;
+    column-rule-width: 5px;
+    column-rule-color: #f39cca;
+}
+.column > h1{
+    font-family: 'CookieRunBlack';
+    color: #785ece;
+    text-align: center;
+    column-span: all;
+}
 
 body{
     margin: 0;
@@ -93,6 +125,9 @@ input:focus{
 }
 
 @media(max-width:800px){
+    .float > p{
+        clear: both;
+    }
     #grid{
         display: block;
         border-bottom: none;
