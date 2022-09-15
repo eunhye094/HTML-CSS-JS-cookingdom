@@ -103,6 +103,7 @@
     color: #785ece;
     text-align: center;
     column-span: all;
+    border: none;
 }
 
 body{
