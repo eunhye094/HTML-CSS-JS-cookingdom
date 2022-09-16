@@ -12,6 +12,11 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap" rel="stylesheet">
+        <script src="js/colors.js"></script>
+        <script
+        src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+        crossorigin="anonymous"></script>
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-CQ656FQLYC"></script>
         <script>
             window.dataLayer = window.dataLayer || [];
@@ -27,11 +32,11 @@
         <div id="grid">
             <nav>
                 <ol>
-                    <li><a href="html/parfait_cookie.html">파르페맛 쿠키</li></a>
-                    <li><a href="html/caramel_arrow_cookie.html">흑당맛 쿠키</li></a>
-                    <li><a href="html/clotted_cream_cookie.html">클로티드 크림 쿠키</li></a>
-                    <li><a href="html/cookie_table.html">쿠키 정리</a></li>
-                    <li><a href="html/form.html">설문조사</a></li>
+                    <li><a href="html/parfait_cookie.html" class="link-nav">파르페맛 쿠키</li></a>
+                    <li><a href="html/caramel_arrow_cookie.html" class="link-nav">흑당맛 쿠키</li></a>
+                    <li><a href="html/clotted_cream_cookie.html" class="link-nav">클로티드 크림 쿠키</li></a>
+                    <li><a href="html/cookie_table.html" class="link-nav">쿠키 정리</a></li>
+                    <li><a href="html/form.html" class="link-nav">설문조사</a></li>
                 </ol>
             </nav>
             <article id="main">
@@ -53,6 +58,7 @@
                     해질녘의 어느 날, 드디어 쿠키들의 운명이 걸린 최후의 전쟁이 시작된다.
                 </p>
                 <button id="btn-heart">♥</button>
+                <input id="btn-night-day" type="button" value="☽" onclick="nightDayHandler(this)">
             </article>
         </div>
         <footer>

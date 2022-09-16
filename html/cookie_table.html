@@ -22,6 +22,11 @@
               display:block;
             }
         </style>
+        <script src="../js/colors.js"></script>
+        <script
+        src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+        crossorigin="anonymous"></script>
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-CQ656FQLYC"></script>
         <script>
         window.dataLayer = window.dataLayer || [];
@@ -37,11 +42,11 @@
         <div id="grid">
             <nav>
                 <ol>
-                    <li><a href="parfait_cookie.html">파르페맛 쿠키</li></a>
-                    <li><a href="caramel_arrow_cookie.html">흑당맛 쿠키</li></a>
-                    <li><a href="clotted_cream_cookie.html">클로티드 크림 쿠키</li></a>
+                    <li><a href="parfait_cookie.html" class="link-nav">파르페맛 쿠키</li></a>
+                    <li><a href="caramel_arrow_cookie.html" class="link-nav">흑당맛 쿠키</li></a>
+                    <li><a href="clotted_cream_cookie.html" class="link-nav">클로티드 크림 쿠키</li></a>
                     <li><a href="cookie_table.html" id="link-active">쿠키 정리</a></li>
-                    <li><a href="form.html">설문조사</a></li>
+                    <li><a href="form.html" class="link-nav">설문조사</a></li>
                 </ol>
             </nav>
             <section>
@@ -71,24 +76,23 @@
                         </tfoot>
                     </table><br>
                     <h3 id="box">2022년 8월 티어표 기준</h3>
-                    <button id="btn-heart">♥</button>
                 </article>
                 <article>
                     <h2>쿠키런 킹덤 캐릭터</h2>
-                    <div style="width: 300px; border: 1px solid black; margin-left: 5px; text-align: center;">
-                        <div style="border-bottom: 1px solid black;">
+                    <div style="width: 300px; border: 1px solid gray; margin-left: 5px; text-align: center;">
+                        <div style="border-bottom: 1px solid gray;">
                             * 일부 캐릭터는 추후 업데이트 예정 *
                         </div>
-                        <div style="float: left; width: 95px; border-right: 1px solid black;">
+                        <div style="float: left; width: 95px; border-right: 1px solid gray;">
                             영웅쿠키
                         </div>
-                        <div style="float: left; width: 100px; border-left: 1px solid black; border-right: 1px solid black; margin: 0 -1px;">
+                        <div style="float: left; width: 100px; border-left: 1px solid gray; border-right: 1px solid gray; margin: 0 -1px;">
                             용감한 쿠키와 친구들
                         </div>
-                        <div style="float: left; width: 95px; border-left: 1px solid black;">
+                        <div style="float: left; width: 95px; border-left: 1px solid gray;">
                             전설쿠키
                         </div>
-                        <div style="clear: both; border-top: 1px solid black;">
+                        <div style="clear: both; border-top: 1px solid gray;">
                             악당쿠키
                         </div>
                     </div>
@@ -121,6 +125,8 @@
                     <p>
                         왼쪽 이미지에는 좌측부터 마법사맛 쿠키, 마들렌맛 쿠키, 호밀맛 쿠키, 에스프레소맛 쿠키, 용감한 쿠키, 딸기맛 쿠키, 용사맛 쿠키입니다. 모든 쿠키가 힘을 합쳐서 모험을 하고 있습니다. 우측에 있는 레드벨벳 케이크 드래곤을 무찌르러 떠나고 있는 것 같습니다. 귀여운 쿠키들과 함께 즐거운 모험을 떠나봅시다!
                     </p>
+                    <button id="btn-heart">♥</button>
+                    <input id="btn-night-day" type="button" value="☽" onclick="nightDayHandler(this)">
                 </article>
             </section>
         </div>

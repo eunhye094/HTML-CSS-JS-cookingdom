@@ -9,6 +9,11 @@
         <meta name="author" content="은혜">
         <!--<meta http-equiv="refresh" content="30">-->
         <link rel="stylesheet" href="../css/stylesheet.min.css">
+        <script src="../js/colors.js"></script>
+        <script
+        src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+        crossorigin="anonymous"></script>
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-CQ656FQLYC"></script>
         <script>
         window.dataLayer = window.dataLayer || [];
@@ -24,11 +29,11 @@
         <div id="grid">
             <nav>
                 <ol>
-                    <li><a href="parfait_cookie.html">파르페맛 쿠키</li></a>
+                    <li><a href="parfait_cookie.html" class="link-nav">파르페맛 쿠키</li></a>
                     <li><a href="caramel_arrow_cookie.html" id="link-active">흑당맛 쿠키</li></a>
-                    <li><a href="clotted_cream_cookie.html">클로티드 크림 쿠키</li></a>
-                    <li><a href="cookie_table.html">쿠키 정리</a></li>
-                    <li><a href="form.html">설문조사</a></li>
+                    <li><a href="clotted_cream_cookie.html" class="link-nav">클로티드 크림 쿠키</li></a>
+                    <li><a href="cookie_table.html" class="link-nav">쿠키 정리</a></li>
+                    <li><a href="form.html" class="link-nav">설문조사</a></li>
                 </ol>
             </nav>
             <article>
@@ -48,6 +53,7 @@
                     마지막 하나의 백성이라도 끝까지 지켜내겠다는 경비대장이 있는 한 다크카카오 왕국의 뜻은 결코 스러지지 않으리!
                 </p>
                 <button id="btn-heart">♥</button>
+                <input id="btn-night-day" type="button" value="☽" onclick="nightDayHandler(this)">
             </article>
         </div>
         <footer>
